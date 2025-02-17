@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import Button from "@mui/material/Button";
@@ -78,4 +79,4 @@ AccountForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default AccountForm;
+export default memo(AccountForm);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useFormik } from "formik";
 import Button from "@mui/material/Button";
 import PropTypes from "prop-types";
@@ -61,4 +62,4 @@ AddTodo.propTypes = {
   addTodo: PropTypes.func.isRequired,
 };
 
-export default AddTodo;
+export default memo(AddTodo);

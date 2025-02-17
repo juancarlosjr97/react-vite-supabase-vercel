@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import PropTypes from "prop-types";
 
 import { AuthContext } from "../hooks/useAuth";
 import supabase from "../utils/supabase";
 
-const AuthProvider = (props) => {
+const AuthProvider = memo((props) => {
   const [user, setUser] = useState(null);
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -48,7 +48,7 @@ const AuthProvider = (props) => {
   return (
     <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
   );
-};
+});
 
 AuthProvider.propTypes = {
   children: PropTypes.node.isRequired,
