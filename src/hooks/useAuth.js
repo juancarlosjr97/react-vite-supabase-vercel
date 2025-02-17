@@ -1,10 +1,10 @@
-import { createContext, useContext, memo } from "react";
+import { createContext, useContext } from "react";
 
-const AuthContext = memo(createContext({
+const AuthContext = createContext({
   loading: true,
   session: null,
   user: null,
-}));
+});
 
 const useAuth = () => {
   return useContext(AuthContext);
