@@ -10,30 +10,30 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.1",
-    "@mui/icons-material": "^5.11.11",
-    "@mui/material": "^5.11.11",
-    "@supabase/supabase-js": "^2.22.0",
-    "formik": "^2.2.9",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hot-toast": "2.4.1",
-    "react-router": "^6.14.2",
-    "yup": "^1.2.0"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.4",
+    "@mui/material": "^6.4.4",
+    "@supabase/supabase-js": "^2.48.1",
+    "formik": "^2.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "2.5.2",
+    "react-router": "^7.1.5",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react-swc": "^4.0.0",
-    "eslint": "^9.17.0",
-    "eslint-plugin-react": "^8.0.0",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.5.0",
-    "globals": "^14.0.0",
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
     "typescript": "^5.7.3",
-    "vite": "^6.0.11"
+    "vite": "^6.1.0"
   }
 }
