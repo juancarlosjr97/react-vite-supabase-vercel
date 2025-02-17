@@ -1,6 +1,6 @@
+import { StrictMode } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { createRoot } from "react-dom/client";
-import { StrictMode } from "react";
 import { Toaster } from "react-hot-toast";
 
 import "./index.css";

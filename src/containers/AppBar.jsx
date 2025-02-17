@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -119,4 +119,4 @@ function ResponsiveAppBar() {
   );
 }
 
-export default ResponsiveAppBar;
+export default memo(ResponsiveAppBar);

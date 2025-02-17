@@ -1,3 +1,4 @@
+import { memo } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SaveIcon from "@mui/icons-material/Save";
 import IconButton from "@mui/material/IconButton";
@@ -69,4 +70,4 @@ Todo.propTypes = {
   deleteTodo: PropTypes.func.isRequired,
 };
 
-export default Todo;
+export default memo(Todo);

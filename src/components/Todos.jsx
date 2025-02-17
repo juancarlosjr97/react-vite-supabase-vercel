@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import Stack from "@mui/material/Stack";
 import toast from "react-hot-toast";
 
@@ -85,4 +85,4 @@ const Todos = () => {
   );
 };
 
-export default Todos;
+export default memo(Todos);
