@@ -3,7 +3,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SaveIcon from "@mui/icons-material/Save";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
-import PropTypes from "prop-types";
 import { useFormik } from "formik";
 
 import { useAuth } from "../hooks/useAuth";
@@ -58,16 +57,6 @@ const Todo = ({ todo, updateTodo, deleteTodo }) => {
       </IconButton>
     </form>
   );
-};
-
-Todo.propTypes = {
-  todo: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    task: PropTypes.string.isRequired,
-    user_id: PropTypes.string,
-  }).isRequired,
-  updateTodo: PropTypes.func.isRequired,
-  deleteTodo: PropTypes.func.isRequired,
 };
 
 export default memo(Todo);
