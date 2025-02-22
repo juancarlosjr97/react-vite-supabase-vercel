@@ -1,7 +1,6 @@
 import { memo } from "react";
 import { useFormik } from "formik";
 import Button from "@mui/material/Button";
-import PropTypes from "prop-types";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 
@@ -56,10 +55,6 @@ const AddTodo = ({ addTodo }) => {
       </Stack>
     </form>
   );
-};
-
-AddTodo.propTypes = {
-  addTodo: PropTypes.func.isRequired,
 };
 
 export default memo(AddTodo);
