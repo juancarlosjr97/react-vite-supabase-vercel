@@ -4,9 +4,12 @@ import { render } from "vitest-browser-react";
 import App from "./App";
 
 test("renders name", async () => {
-  const { getByText } = render(<App />);
+  const { getByText, getByRole } = render(<App />);
 
-  await expect
-    .element(getByText("React + Vite + Supabase + Vercel"))
-    .toBeInTheDocument();
+  const headingTitle = "React + Vite + Supabase + Vercel";
+
+  const headingElement = getByText(headingTitle);
+
+  expect(headingElement.element().innerHTML).toBe(headingTitle);
+  await expect.element(headingElement).toBeInTheDocument();
 });
