@@ -8,7 +8,8 @@
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "pretest": "playwright install"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
