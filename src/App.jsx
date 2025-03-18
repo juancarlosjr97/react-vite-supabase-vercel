@@ -25,7 +25,7 @@ function App() {
           />
         </a>
         <a href="https://vercel.com/" target="_blank">
-          <img src={vercelLogo} className="logo vercel" alt="React Supabase" />
+          <img src={vercelLogo} className="logo vercel" alt="React Vercel" />
         </a>
         <p className="read-the-docs">Click on logos to learn more.</p>
       </div>
