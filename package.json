@@ -7,9 +7,10 @@
     "build": "vite build",
     "dev": "vite",
     "lint": "eslint .",
+    "pretest": "playwright install",
     "preview": "vite preview",
-    "test": "vitest",
-    "pretest": "playwright install"
+    "test:ui": "vitest --ui",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -32,6 +33,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "@vitest/browser": "^3.0.9",
+    "@vitest/ui": "^3.0.9",
     "eslint": "^9.20.1",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.1.0",
