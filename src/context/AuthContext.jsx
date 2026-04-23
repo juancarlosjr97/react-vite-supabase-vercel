@@ -1,9 +1,8 @@
-import { useEffect, useState, memo } from "react";
-
+import { useEffect, useState } from "react";
 import { AuthContext } from "../hooks/useAuth";
 import supabase from "../utils/supabase";
 
-const AuthProvider = memo((props) => {
+export default function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -17,36 +16,23 @@ const AuthProvider = memo((props) => {
       }
     );
 
-    const setData = async () => {
-      const {
-        data: { session },
-        error,
-      } = await supabase.auth.getSession();
-      if (error) {
-        throw error;
-      }
-
-      setSession(session);
-      setUser(session?.user || null);
+    const init = async () => {
+      const { data } = await supabase.auth.getSession();
+      setSession(data.session);
+      setUser(data.session?.user || null);
       setLoading(false);
     };
 
-    setData();
+    init();
 
     return () => {
       listener?.subscription.unsubscribe();
     };
   }, []);
 
-  const value = {
-    loading,
-    session,
-    user,
-  };
-
   return (
-    <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user, session, loading }}>
+      {children}
+    </AuthContext.Provider>
   );
-});
-
-export default AuthProvider;
+}
