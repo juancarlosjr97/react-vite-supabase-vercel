@@ -26,3 +26,9 @@ dist-ssr
 
 # Local development
 .history
+
+# Tool artifacts
+.claude
+.dist
+scripts/
+e2e-run-output.txt

@@ -1,24 +1,21 @@
 import { expect, test } from "vitest";
 import { render } from "vitest-browser-react";
-import App from "./App";
+import { MemoryRouter } from "react-router-dom";
+import Home from "./pages/Home";
+import { AuthContext } from "./hooks/useAuth";
 
-test("renders name", async () => {
-  const { getByText, getByAltText } = render(<App />);
+test("renders the signed-out home page", async () => {
+  const { getByText } = render(
+    <MemoryRouter>
+      <AuthContext.Provider value={{ user: null, session: null, loading: false }}>
+        <Home />
+      </AuthContext.Provider>
+    </MemoryRouter>
+  );
 
-  const headingTitle = "React + Vite + Supabase + Vercel";
-  const headingElement = getByText(headingTitle);
+  const heading = getByText("Personal");
+  const description = getByText("Track spending, create goals and understand your money.");
 
-  await expect.element(headingElement).toBeInTheDocument();
-  expect(headingElement.element().innerHTML).toBe(headingTitle);
-
-  // Check if logos are rendered correctly
-  const reactLogo = getByAltText("React logo");
-  const viteLogo = getByAltText("Vite logo");
-  const supabaseLogo = getByAltText("React Supabase");
-  const vercelLogo = getByAltText("React Vercel");
-
-  await expect.element(reactLogo).toBeInTheDocument();
-  await expect.element(viteLogo).toBeInTheDocument();
-  await expect.element(supabaseLogo).toBeInTheDocument();
-  await expect.element(vercelLogo).toBeInTheDocument();
+  await expect.element(heading).toBeInTheDocument();
+  await expect.element(description).toBeInTheDocument();
 });

@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="120" fill="#b25539"/>
+  <circle cx="256" cy="256" r="200" fill="#fbf5ea"/>
+  <circle cx="256" cy="256" r="220" stroke="#b25539" stroke-width="6" fill="none" stroke-dasharray="20 12" opacity="0.5"/>
+  <path d="
+    M310 172
+    c-12-22-32-36-54-36
+    c-40 0-66 32-66 74
+    v16 H160 v26 h26 v20 H160 v28 h26
+    c0 0 0 12 0 20 H160 v26 H348 v-26
+    H218 c0-6 0-20 0-20 H280 v-18 H218
+    v-18 H280 v-26 H218 v-16
+    c0-28 16-48 38-48
+    c14 0 26 6 36 20 l18-20 z
+  "
+  fill="#181512" stroke="#181512" stroke-width="2" stroke-linejoin="round"/>
+</svg>
